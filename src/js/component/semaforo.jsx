@@ -18,12 +18,12 @@ const Semaforo = () => {
         <div className="superior"></div>
         <div className="semaforo">
             <div className="rojo"></div>
-                <button  onClick={cambiarEstado} type="button" className={"btn rounded-circle" + rojo}></button>
+                <button  onClick={cambiarEstado} type="button" className={"btn rounded-circle " + rojo}></button>
                 
             <div className="amarillo"></div>
-                <button type="button" className="btn btn-warning"></button>
+                <button type="button" className="btn rounded-circle btn-warning"></button>
             <div className="verde"></div>
-                <button type="button" className="btn btn-success"></button>
+                <button type="button" className="btn rounded-circle btn-success"></button>
         </div>
     </div>
     )
