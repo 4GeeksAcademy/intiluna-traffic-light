@@ -13,14 +13,20 @@ const Semaforo = () => {
  
 
     function cambiarEstadoRojo(){
+        setSeleccionAmarillo("")
+        setSeleccionVerde("")
         setSeleccionRojo("seleccionado")
     }
 
     function cambiarEstadoAmarillo(){
+        setSeleccionRojo("")
+        setSeleccionVerde("")
         setSeleccionAmarillo("seleccionado")
     }
 
     function cambiarEstadoVerde(){
+        setSeleccionAmarillo("")
+        setSeleccionRojo("")
         setSeleccionVerde("seleccionado")
     }
     
@@ -29,11 +35,11 @@ const Semaforo = () => {
         <div className="superior"></div>
         <div className="semaforo">
             <div className="rojo"></div>
-                <button  onClick={cambiarEstadoRojo} type="button" className={"btn rounded-circle btn-danger " + seleccionRojo}></button>
+                <button  onClick={cambiarEstadoRojo} type="button" className={"btn rounded-circle mb-3 btn-danger " + seleccionRojo}></button>
             <div className="amarillo"></div>
-                <button onClick={cambiarEstadoAmarillo} type="button" className={"btn rounded-circle btn-warning " + seleccionAmarillo}></button>
+                <button onClick={cambiarEstadoAmarillo} type="button" className={"btn rounded-circle mb-3 btn-warning " + seleccionAmarillo}></button>
             <div className="verde"></div>
-                <button onClick={cambiarEstadoVerde} type="button" className={"btn rounded-circle btn-success " + seleccionVerde}></button>
+                <button onClick={cambiarEstadoVerde} type="button" className={"btn rounded-circle mb-3 btn-success " + seleccionVerde}></button>
         </div>
     </div>
     )
