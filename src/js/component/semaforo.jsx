@@ -7,10 +7,21 @@ import "../../styles/index.css"
 const Semaforo = () => {
     
     //creamos estados
-    const[rojo,setRojo] = useState("btn-danger")
+    const[seleccionRojo,setSeleccionRojo] = useState("")
+    const[seleccionAmarillo,setSeleccionAmarillo] = useState("")
+    const[seleccionVerde,setSeleccionVerde] = useState("")
+ 
 
-    function cambiarEstado(){
-        setRojo("btn-success")
+    function cambiarEstadoRojo(){
+        setSeleccionRojo("seleccionado")
+    }
+
+    function cambiarEstadoAmarillo(){
+        setSeleccionAmarillo("seleccionado")
+    }
+
+    function cambiarEstadoVerde(){
+        setSeleccionVerde("seleccionado")
     }
     
     return (
@@ -18,12 +29,11 @@ const Semaforo = () => {
         <div className="superior"></div>
         <div className="semaforo">
             <div className="rojo"></div>
-                <button  onClick={cambiarEstado} type="button" className={"btn rounded-circle " + rojo}></button>
-                
+                <button  onClick={cambiarEstadoRojo} type="button" className={"btn rounded-circle btn-danger " + seleccionRojo}></button>
             <div className="amarillo"></div>
-                <button type="button" className="btn rounded-circle btn-warning"></button>
+                <button onClick={cambiarEstadoAmarillo} type="button" className={"btn rounded-circle btn-warning " + seleccionAmarillo}></button>
             <div className="verde"></div>
-                <button type="button" className="btn rounded-circle btn-success"></button>
+                <button onClick={cambiarEstadoVerde} type="button" className={"btn rounded-circle btn-success " + seleccionVerde}></button>
         </div>
     </div>
     )

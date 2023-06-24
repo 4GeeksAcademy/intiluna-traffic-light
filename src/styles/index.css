@@ -25,3 +25,8 @@
     background-color: black;
     width: 300px;
 }
+
+.seleccionado{
+    border: 2px solid #ffe599;
+    box-shadow: 0 0 20px #fff888;
+}
